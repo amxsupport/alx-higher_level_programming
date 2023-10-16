@@ -5,8 +5,8 @@
 
 Unittest classes:
     TestRectangle_instantiation - line : 19
-    TestRectangle_width - line : 106
-    TestRectangle_height - line : 
+    TestRectangle_width - line : 108
+    TestRectangle_height - line : 184
 
 """
 
