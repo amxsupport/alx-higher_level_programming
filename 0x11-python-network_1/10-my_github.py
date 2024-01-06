@@ -9,7 +9,7 @@ import requests
 
 
 if __name__ == "__main__":
-    url = "https://swapi.co/api/people"
+    url = "https://api.github.com/user"
     params = {"search": sys.argv[1]}
     results = requests.get(url, params=params).json()
 
