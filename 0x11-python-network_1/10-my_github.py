@@ -1,17 +1,17 @@
 #!/usr/bin/python3
-"""Sends a search request for a given string to the Star Wars API.
-
-Usage: ./9-starwars.py <search string>
-  - The search request is sent to the Star Wars API search people endpoint.
 """
-import sys
+    Python script that takes your GitHub credentials
+    (username and password) and uses the GitHub API to display your id
+"""
 import requests
+import sys
 
+if __name__ == '__main__':
 
-if __name__ == "__main__":
-    url = "https://api.github.com/user"
-    params = {"search": sys.argv[1]}
-    results = requests.get(url, params=params).json()
-
-    print("Number of results: {}".format(results.get("count")))
-    [print(r.get("name")) for r in results.get("results")]
+    r = requests.get('https://api.github.com/user',
+                     auth=(sys.argv[1], sys.argv[2]))
+    json = r.json()
+    try:
+        print(json['id'])
+    except:
+        print("None")
